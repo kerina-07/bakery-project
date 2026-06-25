@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Mie Dorée — Artisan Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="logo">La <span>Mie</span> Dorée</a>
+  <ul class="nav-links">
+    <li><a href="#about">Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#specials">Specials</a></li>
+    <li><a href="#order">Order</a></li>
+  </ul>
+  <button class="nav-cta" onclick="scrollToOrder()">Pre-Order Now</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Est. 1987 · Paris–Inspired</p>
+    <h1 class="hero-title">
+      Baked with<br>
+      <em>soul, not</em><br>shortcuts.
+    </h1>
+    <p class="hero-desc">Every loaf, croissant, and pastry is made from scratch each morning — because great bread cannot be rushed.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#order" class="btn-ghost">Pre-order for pickup →</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-illustration">
+      <div class="hero-bg-circle"></div>
+      <div class="hero-big-text">B</div>
+      <div class="bread-svg-wrap">
+        <!-- Artisan bread illustration SVG -->
+        <svg viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Shadow -->
+          <ellipse cx="170" cy="295" rx="100" ry="16" fill="rgba(61,43,31,0.12)"/>
+          <!-- Bread body -->
+          <path d="M60 200 C55 170 50 130 80 105 C110 80 150 72 170 70 C190 72 230 80 260 105 C290 130 285 170 280 200 C275 228 240 255 170 258 C100 255 65 228 60 200Z" fill="#c8853a"/>
+          <!-- Top scoring marks -->
+          <path d="M120 140 Q170 120 220 140" stroke="#a06430" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <path d="M110 165 Q170 142 230 165" stroke="#a06430" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <!-- Crust highlight -->
+          <path d="M100 120 C130 95 170 88 170 88 C170 88 210 95 240 120" stroke="#e8a856" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+          <!-- Grain texture dots -->
+          <circle cx="140" cy="155" r="2" fill="#a06430" opacity="0.5"/>
+          <circle cx="165" cy="148" r="2" fill="#a06430" opacity="0.5"/>
+          <circle cx="195" cy="158" r="2" fill="#a06430" opacity="0.5"/>
+          <circle cx="155" cy="175" r="2" fill="#a06430" opacity="0.5"/>
+          <circle cx="185" cy="180" r="2" fill="#a06430" opacity="0.5"/>
+          <!-- Slice accent -->
+          <path d="M170 105 C170 105 175 180 170 258" stroke="#a06430" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
+          <!-- Wheat sprigs -->
+          <g transform="translate(50, 60) rotate(-30)">
+            <line x1="0" y1="0" x2="0" y2="40" stroke="#8a9a7b" stroke-width="1.5"/>
+            <ellipse cx="-6" cy="10" rx="4" ry="7" fill="#8a9a7b" transform="rotate(-20 -6 10)"/>
+            <ellipse cx="6" cy="18" rx="4" ry="7" fill="#8a9a7b" transform="rotate(20 6 18)"/>
+            <ellipse cx="-5" cy="26" rx="4" ry="7" fill="#8a9a7b" transform="rotate(-15 -5 26)"/>
+            <ellipse cx="5" cy="34" rx="3" ry="6" fill="#8a9a7b" transform="rotate(15 5 34)"/>
+          </g>
+          <g transform="translate(280, 55) rotate(25)">
+            <line x1="0" y1="0" x2="0" y2="40" stroke="#8a9a7b" stroke-width="1.5"/>
+            <ellipse cx="-6" cy="10" rx="4" ry="7" fill="#8a9a7b" transform="rotate(-20 -6 10)"/>
+            <ellipse cx="6" cy="18" rx="4" ry="7" fill="#8a9a7b" transform="rotate(20 6 18)"/>
+            <ellipse cx="-5" cy="26" rx="4" ry="7" fill="#8a9a7b" transform="rotate(-15 -5 26)"/>
+            <ellipse cx="5" cy="34" rx="3" ry="6" fill="#8a9a7b" transform="rotate(15 5 34)"/>
+          </g>
+          <!-- Small croissant -->
+          <path d="M230 220 C245 200 265 205 270 218 C275 232 260 248 245 245 C232 242 220 236 230 220Z" fill="#d4943f"/>
+          <path d="M232 221 C244 206 264 210 268 220" stroke="#b87530" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Stars decoration -->
+          <text x="88" y="85" font-size="14" fill="#c9933e" opacity="0.5">✦</text>
+          <text x="240" y="78" font-size="10" fill="#c9933e" opacity="0.4">✦</text>
+          <text x="65" y="230" font-size="8" fill="#c9933e" opacity="0.3">✦</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">Sourdough <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Croissants <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Pain au Chocolat <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Brioche <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Baguettes <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Tarts & Pastries <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Seasonal Specials <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Custom Cakes <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Sourdough <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Croissants <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Pain au Chocolat <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Brioche <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Baguettes <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Tarts & Pastries <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Seasonal Specials <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Custom Cakes <span class="ticker-sep">◆</span></span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div>
+    <span class="about-label reveal">Our Story</span>
+  </div>
+  <div class="about-content reveal">
+    <h2>We wake at 3am so you don't have to.</h2>
+    <p>La Mie Dorée was born in a small kitchen in Lyon, where founder Marie Lefebvre learned that bread-making is patience made edible. Every morning before dawn, our bakers begin the ritual: flour, water, salt, time.</p>
+    <p>No shortcuts. No preservatives. Just craft passed down through three generations and the kind of crust that sings when you break it.</p>
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-num">37</span>
+        <span class="stat-label">Years Baking</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">48</span>
+        <span class="stat-label">Hours, Sourdough</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Organic Flour</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="section-header reveal">
+    <h2>From the Oven</h2>
+    <a href="#" class="view-all">Full Menu</a>
+  </div>
+
+  <div class="menu-tabs reveal">
+    <button class="tab-btn active" onclick="switchTab('breads', this)">Breads</button>
+    <button class="tab-btn" onclick="switchTab('pastries', this)">Pastries</button>
+    <button class="tab-btn" onclick="switchTab('sweets', this)">Sweets</button>
+  </div>
+
+  <!-- Breads -->
+  <div class="menu-grid active" id="tab-breads">
+    <div class="menu-card">
+      <span class="badge">Best Seller</span>
+      <span class="menu-card-emoji">🍞</span>
+      <h3>Country Sourdough</h3>
+      <p>A 48-hour fermented levain with an open crumb, crackling crust, and deep wheaty flavour.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 85</span>
+        <button class="add-btn" onclick="addToCart('Country Sourdough')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🥖</span>
+      <h3>Classic Baguette</h3>
+      <p>Traditional Paris-style baguette with a shatteringly crisp crust and pillowy interior.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 28</span>
+        <button class="add-btn" onclick="addToCart('Classic Baguette')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="badge">New</span>
+      <span class="menu-card-emoji">🫓</span>
+      <h3>Olive & Rosemary</h3>
+      <p>Rustic focaccia studded with kalamata olives, rosemary, and Maldon sea salt flakes.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 65</span>
+        <button class="add-btn" onclick="addToCart('Olive & Rosemary Focaccia')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🌾</span>
+      <h3>Seeded Rye</h3>
+      <p>Dark whole-grain rye with sunflower, linseed, and sesame. Dense, nutty, and nourishing.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 72</span>
+        <button class="add-btn" onclick="addToCart('Seeded Rye')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍋</span>
+      <h3>Brioche Loaf</h3>
+      <p>Golden butter-enriched brioche with a featherlight crumb. Spectacular toasted with jam.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 95</span>
+        <button class="add-btn" onclick="addToCart('Brioche Loaf')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🌿</span>
+      <h3>Spelt & Honey</h3>
+      <p>Ancient grain loaf with wildflower honey, delicately sweet and wonderfully digestible.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 78</span>
+        <button class="add-btn" onclick="addToCart('Spelt & Honey')">+ Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pastries -->
+  <div class="menu-grid" id="tab-pastries">
+    <div class="menu-card">
+      <span class="badge">Fan Fav</span>
+      <span class="menu-card-emoji">🥐</span>
+      <h3>Butter Croissant</h3>
+      <p>Laminated dough with 27 layers, made with cultured French butter. Shatteringly good.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 32</span>
+        <button class="add-btn" onclick="addToCart('Butter Croissant')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍫</span>
+      <h3>Pain au Chocolat</h3>
+      <p>Two batons of 66% dark Valrhona chocolate wrapped in buttery croissant pastry.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 36</span>
+        <button class="add-btn" onclick="addToCart('Pain au Chocolat')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="badge">New</span>
+      <span class="menu-card-emoji">🌀</span>
+      <h3>Kouign-Amann</h3>
+      <p>Caramelised Breton pastry — crispy, buttery, and deeply caramelised at the edges.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 42</span>
+        <button class="add-btn" onclick="addToCart('Kouign-Amann')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🥨</span>
+      <h3>Cheese Twists</h3>
+      <p>Puff pastry spirals layered with aged Gruyère and a touch of Dijon. Warm from the oven.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 28</span>
+        <button class="add-btn" onclick="addToCart('Cheese Twists')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🌸</span>
+      <h3>Raspberry Danish</h3>
+      <p>Viennoiserie dough with vanilla crème pâtissière and fresh raspberry compote.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 38</span>
+        <button class="add-btn" onclick="addToCart('Raspberry Danish')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍊</span>
+      <h3>Orange Cardamom Roll</h3>
+      <p>Soft yeasted roll with orange zest, cardamom, and a thick glaze. Warming and fragrant.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 34</span>
+        <button class="add-btn" onclick="addToCart('Orange Cardamom Roll')">+ Add</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sweets -->
+  <div class="menu-grid" id="tab-sweets">
+    <div class="menu-card">
+      <span class="badge">Signature</span>
+      <span class="menu-card-emoji">🍮</span>
+      <h3>Crème Brûlée Tart</h3>
+      <p>Fluted pastry shell filled with silky vanilla custard, torched to order at the counter.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 55</span>
+        <button class="add-btn" onclick="addToCart('Crème Brûlée Tart')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍓</span>
+      <h3>Strawberry Millefeuille</h3>
+      <p>A thousand crisp layers with Chantilly cream and seasonal strawberries. Light as air.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 62</span>
+        <button class="add-btn" onclick="addToCart('Strawberry Millefeuille')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍰</span>
+      <h3>Lemon Tart</h3>
+      <p>Sharp, glossy lemon curd in a buttery pâte sucrée shell. Classic and unimprovable.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 48</span>
+        <button class="add-btn" onclick="addToCart('Lemon Tart')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍌</span>
+      <h3>Chocolate Éclair</h3>
+      <p>Choux pastry filled with dark chocolate mousse and topped with glossy ganache.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 45</span>
+        <button class="add-btn" onclick="addToCart('Chocolate Éclair')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🥜</span>
+      <h3>Pistachio Macarons</h3>
+      <p>Delicate almond meringue cookies with pistachio buttercream filling. Pack of 6.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 52</span>
+        <button class="add-btn" onclick="addToCart('Pistachio Macarons')">+ Add</button>
+      </div>
+    </div>
+    <div class="menu-card">
+      <span class="menu-card-emoji">🍫</span>
+      <h3>Dark Chocolate Tart</h3>
+      <p>70% single-origin chocolate ganache in a dark cocoa shell. Rich and silken.</p>
+      <div class="menu-card-footer">
+        <span class="price">R 58</span>
+        <button class="add-btn" onclick="addToCart('Dark Chocolate Tart')">+ Add</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALS -->
+<section class="specials" id="specials">
+  <div class="specials-text">
+    <h2>Weekly <em>Specials</em></h2>
+    <p>Our bakers experiment throughout the week with limited-edition flavours and seasonal ingredients. Pre-order yours to ensure availability.</p>
+  </div>
+  <div class="specials-list">
+    <div class="special-item">
+      <span class="special-day">Monday</span>
+      <span class="special-name">Activated Charcoal Sourdough</span>
+      <span class="special-price">R 92</span>
+    </div>
+    <div class="special-item">
+      <span class="special-day">Tuesday</span>
+      <span class="special-name">Matcha & White Chocolate Laminate</span>
+      <span class="special-price">R 48</span>
+    </div>
+    <div class="special-item">
+      <span class="special-day">Wednesday</span>
+      <span class="special-name">Sourdough with Aged Cheddar & Thyme</span>
+      <span class="special-price">R 88</span>
+    </div>
+    <div class="special-item">
+      <span class="special-day">Thursday</span>
+      <span class="special-name">Miso Caramel Kouign-Amann</span>
+      <span class="special-price">R 52</span>
+    </div>
+    <div class="special-item">
+      <span class="special-day">Friday</span>
+      <span class="special-name">Lavender & Lemon Brioche</span>
+      <span class="special-price">R 65</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <span class="quote-mark">"</span>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">The best croissants I've had outside of Paris. The butter is real, the technique is impeccable, and the flavour is unforgettable.</p>
+      <span class="testimonial-author">— Sophie M.</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">"</span>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">I pre-order every week. The sourdough is a revelation — nutty, tangy, with a crust that's genuinely crispy. This is real bread.</p>
+      <span class="testimonial-author">— James H.</span>
+    </div>
+    <div class="testimonial-card">
+      <span class="quote-mark">"</span>
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">The weekend order is a ritual in our house. Fresh pain au chocolat and a brioche — it makes Friday evenings special. Thank you!</p>
+      <span class="testimonial-author">— Lucia & Marco</span>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="order-section" id="order">
+  <div class="order-info">
+    <h2>Pre-Order Your Fresh Favourites</h2>
+    <p>We bake fresh daily. Place your order below to ensure your selections are ready for pickup at your preferred time.</p>
+    
+    <div class="hours-list">
+      <h3>Opening Hours</h3>
+      <div class="hours-item">
+        <span>Monday – Friday</span>
+        <span>7:00 AM – 7:00 PM</span>
+      </div>
+      <div class="hours-item">
+        <span>Saturday</span>
+        <span>8:00 AM – 6:00 PM</span>
+      </div>
+      <div class="hours-item">
+        <span>Sunday</span>
+        <span>8:00 AM – 4:00 PM</span>
+      </div>
+    </div>
+  </div>
+
+  <form class="order-form" onsubmit="handleFormSubmit(event)">
+    <div class="form-row">
+      <div class="field">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="field">
+        <label for="pickup-date">Pickup Date</label>
+        <input type="date" id="pickup-date" name="pickup-date" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field">
+        <label for="pickup-time">Preferred Time</label>
+        <select id="pickup-time" name="pickup-time" required>
+          <option value="">Select a time</option>
+          <option value="09:00">9:00 AM</option>
+          <option value="10:00">10:00 AM</option>
+          <option value="11:00">11:00 AM</option>
+          <option value="12:00">12:00 PM</option>
+          <option value="14:00">2:00 PM</option>
+          <option value="15:00">3:00 PM</option>
+          <option value="16:00">4:00 PM</option>
+          <option value="17:00">5:00 PM</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="items">Items & Quantities</label>
+        <textarea id="items" name="items" placeholder="e.g., 2x Country Sourdough, 1x Butter Croissant..." required></textarea>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="notes">Special Requests (optional)</label>
+      <textarea id="notes" name="notes" placeholder="Allergies, dietary preferences, etc."></textarea>
+    </div>
+
+    <button type="submit" class="form-submit">Place Pre-Order</button>
+  </form>
+</section>
+
+<!-- Toast notification -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">La <span>Mie</span> Dorée</a>
+      <p>Handcrafted artisan breads and pastries baked fresh daily with the finest organic ingredients.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#menu">Breads</a></li>
+        <li><a href="#menu">Pastries</a></li>
+        <li><a href="#menu">Sweets</a></li>
+        <li><a href="#specials">Specials</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul>
+        <li><a href="#">Mon–Fri: 7am–7pm</a></li>
+        <li><a href="#">Sat: 8am–6pm</a></li>
+        <li><a href="#">Sun: 8am–4pm</a></li>
+        <li><a href="#">Closed on holidays</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@lamiedoree.com">hello@lamiedoree.com</a></li>
+        <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+        <li><a href="#">123 Baker St, City</a></li>
+        <li><a href="#">@lamiedoree</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 La Mie Dorée. All rights reserved.</p>
+    <p>Handcrafted with ❤ and flour</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
